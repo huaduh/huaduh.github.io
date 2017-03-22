@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SheetZak</title>
+    
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/sheetrock.css" rel="stylesheet" type="text/css">
+
+   
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+            
+			<script class="example-render" data-language="javascript">
+				// var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHBltBVpUBumAUzT__rhMvrz5Rk/edit#gid=0';
+				var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1zStwfXarmqswXWoeXtQBdv9NwvtQzsl269ZRtm_7Mh4/edit#gid=0';
+				
+				
+			</script>
+
+          <h3 id="basic">Porehex Nyengled</h3>
+		  <div class="example-render-group">
+				<table id="switch-hitters" class="table table-condensed table-striped"></table>
+				<script class="example-render" data-language="javascript" data-example-class="operator-equals">
+					// Load top ten switch hitters.
+					$('#switch-hitters').sheetrock({
+					url: mySpreadsheet,
+					//  query: "select A,B,C,D, G, L where E = 'Both' order by L desc",
+					query: "select A,B,C,D",
+					fetchSize: 50
+					});
+				</script>
+          </div>
+      </div>
+    </div>
+</body>
+</html>
